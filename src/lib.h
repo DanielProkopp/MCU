@@ -15,6 +15,9 @@
 #define digitalWrite(port,bit,state) (port = state << bit)
 
 
+#define digitalRead(port,bit) (port &= (1 << bit))
+
+
 
 /*!
   @def digitalWrite(port,bit,state)
@@ -22,8 +25,7 @@
 #define pinMode(ddrX,bit,state) (ddrX = state << bit)
 
 
-#define digitalRead(pinX,bit) (pinX &= (1 << bit))
-
+ 
 
 
 
